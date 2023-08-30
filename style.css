@@ -5,7 +5,7 @@
 }
 
 .body{
-    background: url("bg.jpg");
+    background: url("../bg.jpg");
     min-height: 100vh;
     background-size: 100vw 100vh;
     background-repeat: no-repeat;
@@ -18,16 +18,16 @@
     position: absolute;
     top: 9px;
     right: 200px;
-    font-size: 40px;
+    font-size: 39px;
     font-weight: bold;
     font-family: 'New Tengomin', serif;
 
 }
 #HIscoreBox{
     position: absolute;
-    top: 60px;
+    top: 59px;
     right: 140px;
-    font-size: 40px;
+    font-size: 39px;
     font-weight: bold;
     font-family: 'New Tegomin', serif;
 }
