@@ -9,7 +9,7 @@ let score = 0;
 let lastPaintTime = 0; 
 let snakeArr = [
     {x: 13, y: 15}
-]
+];
 food = {x:6, y: 8};
 
 //Game functions
@@ -57,8 +57,9 @@ function gameEngine(){
         if(score>hiscoreval){
             hiscoreval = score;
             localStorage.setItem("hiscore", JSON.stringify(hiscoreval));
-            HIscoreBox.innerHTML = "Hi Score: " + hiscoreval;
+            HIscoreBox.innerHTML = "HiScore: " + hiscoreval;
         }
+
         scoreBox.innerHTML = "Score:" + score;
         snakeArr.unshift({x: snakeArr[0].x + inputDir.x, y: snakeArr[0].y + inputDir.y});
         let a = 2;
@@ -106,16 +107,19 @@ function gameEngine(){
 }
 
 //main logic starts here
+
 musicSound.play();
+
 let hiscore = localStorage.getItem("hiscore");
-if(hiscore == null){
+if(hiscore === null){
     hiscoreval = 0;
-    localStorage.setItem("hiscore", JSON.stringify(hiscoreval));
+    localStorage.setItem("hiscore", JSON.stringify(hiscoreval))
 }
 else{
     hiscoreval = JSON.parse(hiscore);
     HIscoreBox.innerHTML = "HiScore: " + hiscore;
 }
+
 window.requestAnimationFrame(main);
 window.addEventListener('keydown', e =>{
     inputDir = {x: 0, y: 1} //Start the game
