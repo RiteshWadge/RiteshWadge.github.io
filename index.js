@@ -107,7 +107,8 @@ if(hiscore == null){
     localStorage.setItem("hiscore", JSON.stringify(hiscoreval))
 }
 else{
-    HIscoreBox
+    hiscoreval = JSON.parse(hiscore);
+    HIscoreBox.innerHTML = "HiScore: " + hiscore;
 }
 window.requestAnimationFrame(main);
 window.addEventListener('keydown', e =>{
