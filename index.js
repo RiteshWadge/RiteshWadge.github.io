@@ -57,7 +57,7 @@ function gameEngine(){
         if(score>hiscoreval){
             hiscoreval = score;
             localStorage.setItem("hiscore", JSON.stringify(hiscoreval));
-            HIscoreBox.innerHTML = "HiScore: " + hiscoreval;
+            HIscoreBox.innerHTML = "Hi Score: " + hiscoreval;
         }
         scoreBox.innerHTML = "Score:" + score;
         snakeArr.unshift({x: snakeArr[0].x + inputDir.x, y: snakeArr[0].y + inputDir.y});
@@ -106,10 +106,11 @@ function gameEngine(){
 }
 
 //main logic starts here
+musicSound.play();
 let hiscore = localStorage.getItem("hiscore");
 if(hiscore == null){
     hiscoreval = 0;
-    localStorage.setItem("hiscore", JSON.stringify(hiscoreval))
+    localStorage.setItem("hiscore", JSON.stringify(hiscoreval));
 }
 else{
     hiscoreval = JSON.parse(hiscore);
