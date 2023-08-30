@@ -56,7 +56,7 @@ function gameEngine(){
         score +=1;
         if(score>hiscoreval){
             hiscoreval = score;
-            localStorage.setItem("hiscore", JSON.stringify(hiscoreval))
+            localStorage.setItem("hiscore", JSON.stringify(hiscoreval));
             HIscoreBox.innerHTML = "HiScore: " + hiscoreval;
         }
         scoreBox.innerHTML = "Score:" + score;
