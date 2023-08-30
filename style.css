@@ -18,16 +18,16 @@
     position: absolute;
     top: 9px;
     right: 200px;
-    font-size: 39px;
+    font-size: 40px;
     font-weight: bold;
     font-family: 'New Tengomin', serif;
 
 }
 #HIscoreBox{
     position: absolute;
-    top: 59px;
+    top: 60px;
     right: 140px;
-    font-size: 39px;
+    font-size: 40px;
     font-weight: bold;
     font-family: 'New Tegomin', serif;
 }
