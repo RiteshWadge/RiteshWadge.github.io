@@ -101,7 +101,14 @@ function gameEngine(){
 }
 
 //main logic starts here
-
+let hiscore = localStorage.getItem("hiscore");
+if(hiscore == null){
+    hiscoreval = 0;
+    localStorage.setItem("hiscore", JSON.stringify(hiscoreval))
+}
+else{
+    HIscoreBox
+}
 window.requestAnimationFrame(main);
 window.addEventListener('keydown', e =>{
     inputDir = {x: 0, y: 1} //Start the game
